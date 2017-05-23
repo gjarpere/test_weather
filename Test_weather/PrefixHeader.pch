@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  Test_weather
+//
+//  Created by Aleksandr Martynov on 5/23/17.
+//  Copyright © 2017 Aleksandr Martynov. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Constants.h"
+
+#define WEAK_SELF __weak __typeof(self)
+#define STRONG_SELF __strong __typeof(self)
+
+#define SAFE_BLOCK(block, ...) block ? block(__VA_ARGS__) : nil
+
+#define TSEiOSVersion      [[[UIDevice currentDevice] systemVersion] floatValue]
+
+#endif /* PrefixHeader_pch */
