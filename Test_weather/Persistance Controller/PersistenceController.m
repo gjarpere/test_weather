@@ -47,7 +47,7 @@
         if ([self interfaceManagedObjectContext]) {
             return;
         }
-        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Test_weather" withExtension:@"momd"];
+        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Test_weather" withExtension:@"momd"];//?)))
         NSManagedObjectModel *mom = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
         NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
         [self setInterfaceManagedObjectContext:[[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType]];
@@ -75,7 +75,7 @@
             if (error) {
                 NSLog(@"ENPersistenceController: error while adding persistantController: %@", error);
             }
-            completion();
+            completion(); // if comletion block nil?
         });
     } else {
         NSPersistentContainer *container = [NSPersistentContainer persistentContainerWithName:@"Test_weather"];
