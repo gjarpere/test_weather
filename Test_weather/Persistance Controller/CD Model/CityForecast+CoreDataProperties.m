@@ -17,6 +17,8 @@
 @dynamic city;
 @dynamic humidity;
 @dynamic pressure;
+@dynamic unique;
 @dynamic temp;
+@dynamic date;
 
 @end

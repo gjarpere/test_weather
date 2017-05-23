@@ -47,7 +47,7 @@
         if ([self interfaceManagedObjectContext]) {
             return;
         }
-        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
+        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Test_weather" withExtension:@"momd"];
         NSManagedObjectModel *mom = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
         NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
         [self setInterfaceManagedObjectContext:[[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType]];
@@ -78,7 +78,7 @@
             completion();
         });
     } else {
-        NSPersistentContainer *container = [NSPersistentContainer persistentContainerWithName:@"Model"];
+        NSPersistentContainer *container = [NSPersistentContainer persistentContainerWithName:@"Test_weather"];
         container.persistentStoreDescriptions.firstObject.type = self.storeType;
         self.container = container;
         [container loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {

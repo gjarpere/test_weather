@@ -7,6 +7,7 @@
 //
 
 #import "CityForecast+CoreDataClass.h"
+#import "DateHelper.h"
 
 @implementation CityForecast
 
@@ -14,15 +15,21 @@
     EKManagedObjectMapping *mapping = [EKManagedObjectMapping mappingForEntityName:NSStringFromClass([self class])
                                                                          withBlock:^(EKManagedObjectMapping *mapping) {
                                                                              mapping.ignoreMissingFields = YES;
-                                                                             
-                                                                             [mapping mapKeyPath:kCityName toProperty:kCity];
+                                                                             [mapping mapKeyPath:kCity toProperty:kCity];
                                                                              [mapping mapKeyPath:kTemperaturePath toProperty:kTemperature];
                                                                              [mapping mapKeyPath:kHumidityPath toProperty:kHumidity];
                                                                              [mapping mapKeyPath:kPressurePath toProperty:kPressure];
+                                                                             [mapping mapKeyPath:kUnique toProperty:kUnique];
+                                                                             [mapping mapKeyPath:kDatePath toProperty:kDate withValueBlock:^id(NSString *key, id value, NSManagedObjectContext *context) {
+                                                                                 NSDate *startDate = [DateHelper forecastDateFromString:value];
+                                                                                 return startDate;
+                                                                             }];
+
                                                                          }];
-    mapping.primaryKey = kCity;
+    mapping.primaryKey = kUnique;
     
     return mapping;
 }
+
 
 @end
