@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		053315574651EB20A7A8EDA4D9CF243F /* NSDateFormatter+EasyMappingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CECF9B49D5278BF3CD9D0CD0E5EEB06D /* NSDateFormatter+EasyMappingAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09A8DD003507F8396D4DBFB6A8AEBABA /* EKCoreDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 234DF969FB79F5512F926696201B14F8 /* EKCoreDataImporter.m */; };
+		13A0E5351AFCEDFF0615998CFFB199FC /* EKCoreDataImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = F2F44DC528D25C2543590F9404E5EE69 /* EKCoreDataImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		146941105C8F734BF5CD86CA88B5C245 /* EKMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5589E227E235420F9FD84DE7FB2525 /* EKMapper.m */; };
+		2B10BC71B823A58C691CAC78D4AE9077 /* EKPropertyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF93FE486FB7E8AA04646FC9060F0F7 /* EKPropertyHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D5FEE22CC8083765DCBE6CBC9C3AF9D /* EKObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 17D10AB981CDABEEBDDE8C7DB8BC406D /* EKObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E0D1F3FE65B5C1163FC6BFB5381F6C7 /* NSArray+FlattenArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 60357573D874C416D1BCFC745B96097C /* NSArray+FlattenArray.m */; };
+		368B2097F8D6A4E9EE8E382D76ECCF1D /* EKRelationshipMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F3530317C0FA230EF6746372C360E /* EKRelationshipMapping.m */; };
+		3A3109C62B98C0FB4FEC3E53CA2A6DF1 /* EKManagedObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C78A32B7F2071060E39F61B4A1CE36E0 /* EKManagedObjectMapper.m */; };
+		460F3AA42F5BA65BB34AE3AB9C9E1065 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		4971D36F51B3A6DD2E84DD485E90C1C3 /* EasyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 18C8160AA6F82901C1DC552318E6D35C /* EasyMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BBA5E6F174B5FB35CEAB624346B0F1D /* EasyMapping-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D463EDDDE5E198C3AF18D4B6C0B244EA /* EasyMapping-dummy.m */; };
+		4DFCB2628E1CF8E725B4213948B88AB9 /* Pods-Test_weather-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 279BDBD928635607EDF8A1DAB8E5B21F /* Pods-Test_weather-dummy.m */; };
+		52B282D683323181D3647C13970B45C2 /* EKObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 534C4E5AF8681C70D515FE3C01255263 /* EKObjectModel.m */; };
+		5E439141DDFCDAE06C22FB47EE9D8713 /* EKManagedObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E4158645CA94D14C2777E5599A90D3 /* EKManagedObjectMapping.m */; };
+		61A252CB8AD0176AB41CB0D878479BD2 /* EKRelationshipMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD1D07C6DE169EFCC974C1FD40F3E1B /* EKRelationshipMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84B1A8230A225A1CEE8F97B6470A518F /* EKManagedObjectMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CB664FDBD33B68F491BB3AB4B76FF9 /* EKManagedObjectMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		887172210754DD696E52AC3BA4714B1D /* EKSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 499D8A302F46033B591A494ADE59FA2A /* EKSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C8504EAEB638080BF87245BF3A8AFA8 /* EKMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 787F7A4261678BA2C30BF990545386AC /* EKMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E31FE56190F95DF0636E9849DFC7EF2 /* EKPropertyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4756A8CA77A6CA4351B62142492203 /* EKPropertyHelper.m */; };
+		9E93A942346BFE897793680E86CA4C7F /* EKManagedObjectModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 79152F280ECDC2DB40B1534227A9C117 /* EKManagedObjectModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A19AACC6E43D161137018A78BB8B4245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		BD410383EC35D1C76D41FF318C42CECF /* EKObjectModel.h in Headers */ = {isa = PBXBuildFile; fileRef = CCC5631113860A968326FF56905087FF /* EKObjectModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8A0C7F42FBED630ED46FB82A427A9C6 /* EKPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CA7D93E49E95908608EA5671807101 /* EKPropertyMapping.m */; };
+		CC4BEFD2D9963DC1297541F323A56F9D /* NSArray+FlattenArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D7A049B574DB60BBF0170024E92DFB /* NSArray+FlattenArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1C6E25407C1B032A1EE680271EF0374 /* EKManagedObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 490BF463AB942500F114D3B53E5197BC /* EKManagedObjectModel.m */; };
+		D449E0EACA2205EBB4FCDE496D71E871 /* EKPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFECA1D019DEA224E540C7EF610ABF6 /* EKPropertyMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D79C9C18DAE61D45D8D935B568EF77A5 /* EKMappingBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FC5F1A3236D40C3C491F9683C1CD93 /* EKMappingBlocks.m */; };
+		DCC8260C26678BFB9474403662E063F3 /* EKManagedObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC839C42E33F3A6AC676EC7E5462302 /* EKManagedObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD399DC45DEDF3BDA0306B84176FD99F /* EKSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA114953E72CB42C32D877DA7F916B88 /* EKSerializer.m */; };
+		E2CC2DD90681D439EEA28C2A567B67D0 /* EKMappingProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 169D8F36A14664B8CAC0071E7AE8F73F /* EKMappingProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF964E1A8E527F739F740C3D6BE1705F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */; };
+		F54D9E2DA6C9BEF9DD280FAE7E7AFE39 /* EKObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E4F17A80402EC9CD559DF964C42900 /* EKObjectMapping.m */; };
+		FBCEBC98EA58C7842B862F11874D22B6 /* EKMappingBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 4353CE39D9B21D7779D7F476C2C6619C /* EKMappingBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		357F5E607D201A8825477F42E1C50D73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94B241340C55A252F10B90F387936FA0;
+			remoteInfo = EasyMapping;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		143A5BD7697B9EC7E744083483E7D4DC /* Pods-Test_weather-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Test_weather-acknowledgements.markdown"; sourceTree = "<group>"; };
+		169D8F36A14664B8CAC0071E7AE8F73F /* EKMappingProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKMappingProtocol.h; path = EasyMapping/EKMappingProtocol.h; sourceTree = "<group>"; };
+		17CA7D93E49E95908608EA5671807101 /* EKPropertyMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKPropertyMapping.m; path = EasyMapping/EKPropertyMapping.m; sourceTree = "<group>"; };
+		17D10AB981CDABEEBDDE8C7DB8BC406D /* EKObjectMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKObjectMapping.h; path = EasyMapping/EKObjectMapping.h; sourceTree = "<group>"; };
+		18C8160AA6F82901C1DC552318E6D35C /* EasyMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EasyMapping.h; path = EasyMapping/EasyMapping.h; sourceTree = "<group>"; };
+		234DF969FB79F5512F926696201B14F8 /* EKCoreDataImporter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKCoreDataImporter.m; path = EasyMapping/EKCoreDataImporter.m; sourceTree = "<group>"; };
+		279BDBD928635607EDF8A1DAB8E5B21F /* Pods-Test_weather-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Test_weather-dummy.m"; sourceTree = "<group>"; };
+		2BFECA1D019DEA224E540C7EF610ABF6 /* EKPropertyMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKPropertyMapping.h; path = EasyMapping/EKPropertyMapping.h; sourceTree = "<group>"; };
+		2C0767688A3D1D4128255F76718CE0FF /* Pods-Test_weather-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Test_weather-resources.sh"; sourceTree = "<group>"; };
+		32CB664FDBD33B68F491BB3AB4B76FF9 /* EKManagedObjectMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKManagedObjectMapper.h; path = EasyMapping/EKManagedObjectMapper.h; sourceTree = "<group>"; };
+		426EA3740830D471AFB270C9718A2E7F /* Pods-Test_weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Test_weather.release.xcconfig"; sourceTree = "<group>"; };
+		4353CE39D9B21D7779D7F476C2C6619C /* EKMappingBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKMappingBlocks.h; path = EasyMapping/EKMappingBlocks.h; sourceTree = "<group>"; };
+		490BF463AB942500F114D3B53E5197BC /* EKManagedObjectModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKManagedObjectModel.m; path = EasyMapping/EKManagedObjectModel.m; sourceTree = "<group>"; };
+		499D8A302F46033B591A494ADE59FA2A /* EKSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKSerializer.h; path = EasyMapping/EKSerializer.h; sourceTree = "<group>"; };
+		4DC839C42E33F3A6AC676EC7E5462302 /* EKManagedObjectMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKManagedObjectMapping.h; path = EasyMapping/EKManagedObjectMapping.h; sourceTree = "<group>"; };
+		534C4E5AF8681C70D515FE3C01255263 /* EKObjectModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKObjectModel.m; path = EasyMapping/EKObjectModel.m; sourceTree = "<group>"; };
+		55D7A049B574DB60BBF0170024E92DFB /* NSArray+FlattenArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+FlattenArray.h"; path = "EasyMapping/NSArray+FlattenArray.h"; sourceTree = "<group>"; };
+		60357573D874C416D1BCFC745B96097C /* NSArray+FlattenArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+FlattenArray.m"; path = "EasyMapping/NSArray+FlattenArray.m"; sourceTree = "<group>"; };
+		6D9B21CF2E5E8C61EC34F102D716FA7D /* Pods-Test_weather-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Test_weather-frameworks.sh"; sourceTree = "<group>"; };
+		787F7A4261678BA2C30BF990545386AC /* EKMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKMapper.h; path = EasyMapping/EKMapper.h; sourceTree = "<group>"; };
+		79152F280ECDC2DB40B1534227A9C117 /* EKManagedObjectModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKManagedObjectModel.h; path = EasyMapping/EKManagedObjectModel.h; sourceTree = "<group>"; };
+		8A6F3530317C0FA230EF6746372C360E /* EKRelationshipMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKRelationshipMapping.m; path = EasyMapping/EKRelationshipMapping.m; sourceTree = "<group>"; };
+		8C5589E227E235420F9FD84DE7FB2525 /* EKMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKMapper.m; path = EasyMapping/EKMapper.m; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9AD1D07C6DE169EFCC974C1FD40F3E1B /* EKRelationshipMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKRelationshipMapping.h; path = EasyMapping/EKRelationshipMapping.h; sourceTree = "<group>"; };
+		9EAE4DA66F6D49D7BCD981B353FFEC35 /* Pods-Test_weather-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Test_weather-acknowledgements.plist"; sourceTree = "<group>"; };
+		A42C160A24732AD7CCD69AFEDC4E99BF /* EasyMapping.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyMapping.xcconfig; sourceTree = "<group>"; };
+		B1E4158645CA94D14C2777E5599A90D3 /* EKManagedObjectMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKManagedObjectMapping.m; path = EasyMapping/EKManagedObjectMapping.m; sourceTree = "<group>"; };
+		B1E4F17A80402EC9CD559DF964C42900 /* EKObjectMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKObjectMapping.m; path = EasyMapping/EKObjectMapping.m; sourceTree = "<group>"; };
+		BF4756A8CA77A6CA4351B62142492203 /* EKPropertyHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKPropertyHelper.m; path = EasyMapping/EKPropertyHelper.m; sourceTree = "<group>"; };
+		C06983CE090DE73A9F542F11396ADEB0 /* EasyMapping-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyMapping-prefix.pch"; sourceTree = "<group>"; };
+		C6B7CD480427E25FEFDF47486607333F /* libPods-Test_weather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Test_weather.a"; path = "libPods-Test_weather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C78A32B7F2071060E39F61B4A1CE36E0 /* EKManagedObjectMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKManagedObjectMapper.m; path = EasyMapping/EKManagedObjectMapper.m; sourceTree = "<group>"; };
+		CB029DD31E06BDE6C2E1EA08ADF2F1B0 /* Pods-Test_weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Test_weather.debug.xcconfig"; sourceTree = "<group>"; };
+		CCC5631113860A968326FF56905087FF /* EKObjectModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKObjectModel.h; path = EasyMapping/EKObjectModel.h; sourceTree = "<group>"; };
+		CECF9B49D5278BF3CD9D0CD0E5EEB06D /* NSDateFormatter+EasyMappingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDateFormatter+EasyMappingAdditions.h"; path = "EasyMapping/NSDateFormatter+EasyMappingAdditions.h"; sourceTree = "<group>"; };
+		D030B6B6FD8004E267A857A56CAF730F /* libEasyMapping.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libEasyMapping.a; path = libEasyMapping.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D463EDDDE5E198C3AF18D4B6C0B244EA /* EasyMapping-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyMapping-dummy.m"; sourceTree = "<group>"; };
+		DA114953E72CB42C32D877DA7F916B88 /* EKSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKSerializer.m; path = EasyMapping/EKSerializer.m; sourceTree = "<group>"; };
+		DEF93FE486FB7E8AA04646FC9060F0F7 /* EKPropertyHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKPropertyHelper.h; path = EasyMapping/EKPropertyHelper.h; sourceTree = "<group>"; };
+		E1FC5F1A3236D40C3C491F9683C1CD93 /* EKMappingBlocks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EKMappingBlocks.m; path = EasyMapping/EKMappingBlocks.m; sourceTree = "<group>"; };
+		E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		F2F44DC528D25C2543590F9404E5EE69 /* EKCoreDataImporter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EKCoreDataImporter.h; path = EasyMapping/EKCoreDataImporter.h; sourceTree = "<group>"; };
+		FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61F9B4A1BCA3FEBBDAE62DF8DEBD10D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				460F3AA42F5BA65BB34AE3AB9C9E1065 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2F1DE2BA77EDDE8EAA44D83B15F2B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF964E1A8E527F739F740C3D6BE1705F /* CoreData.framework in Frameworks */,
+				A19AACC6E43D161137018A78BB8B4245 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18C31505F53BCD0CB0F85AB659963013 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */,
+				FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		28A938F64B5EA0F57BB6DA6414963CDC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A42C160A24732AD7CCD69AFEDC4E99BF /* EasyMapping.xcconfig */,
+				D463EDDDE5E198C3AF18D4B6C0B244EA /* EasyMapping-dummy.m */,
+				C06983CE090DE73A9F542F11396ADEB0 /* EasyMapping-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EasyMapping";
+			sourceTree = "<group>";
+		};
+		358A47F298495ABEFCCA59BDA38EBD55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7D91DD4F499305F3FC92CD3EE2E7B50 /* EasyMapping */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18C31505F53BCD0CB0F85AB659963013 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E2FB0834AB84334C479D0CC81210BD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D030B6B6FD8004E267A857A56CAF730F /* libEasyMapping.a */,
+				C6B7CD480427E25FEFDF47486607333F /* libPods-Test_weather.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63DF189920E89C6951784B8B5D65B8B7 /* Pods-Test_weather */ = {
+			isa = PBXGroup;
+			children = (
+				143A5BD7697B9EC7E744083483E7D4DC /* Pods-Test_weather-acknowledgements.markdown */,
+				9EAE4DA66F6D49D7BCD981B353FFEC35 /* Pods-Test_weather-acknowledgements.plist */,
+				279BDBD928635607EDF8A1DAB8E5B21F /* Pods-Test_weather-dummy.m */,
+				6D9B21CF2E5E8C61EC34F102D716FA7D /* Pods-Test_weather-frameworks.sh */,
+				2C0767688A3D1D4128255F76718CE0FF /* Pods-Test_weather-resources.sh */,
+				CB029DD31E06BDE6C2E1EA08ADF2F1B0 /* Pods-Test_weather.debug.xcconfig */,
+				426EA3740830D471AFB270C9718A2E7F /* Pods-Test_weather.release.xcconfig */,
+			);
+			name = "Pods-Test_weather";
+			path = "Target Support Files/Pods-Test_weather";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				358A47F298495ABEFCCA59BDA38EBD55 /* Pods */,
+				5E2FB0834AB84334C479D0CC81210BD9 /* Products */,
+				A65A1698E4363D7D64E268964E0CF022 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A65A1698E4363D7D64E268964E0CF022 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				63DF189920E89C6951784B8B5D65B8B7 /* Pods-Test_weather */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D7D91DD4F499305F3FC92CD3EE2E7B50 /* EasyMapping */ = {
+			isa = PBXGroup;
+			children = (
+				E1069C03696BF4E69B4DCDF0DF66F782 /* Core */,
+				28A938F64B5EA0F57BB6DA6414963CDC /* Support Files */,
+			);
+			name = EasyMapping;
+			path = EasyMapping;
+			sourceTree = "<group>";
+		};
+		E1069C03696BF4E69B4DCDF0DF66F782 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				18C8160AA6F82901C1DC552318E6D35C /* EasyMapping.h */,
+				F2F44DC528D25C2543590F9404E5EE69 /* EKCoreDataImporter.h */,
+				234DF969FB79F5512F926696201B14F8 /* EKCoreDataImporter.m */,
+				32CB664FDBD33B68F491BB3AB4B76FF9 /* EKManagedObjectMapper.h */,
+				C78A32B7F2071060E39F61B4A1CE36E0 /* EKManagedObjectMapper.m */,
+				4DC839C42E33F3A6AC676EC7E5462302 /* EKManagedObjectMapping.h */,
+				B1E4158645CA94D14C2777E5599A90D3 /* EKManagedObjectMapping.m */,
+				79152F280ECDC2DB40B1534227A9C117 /* EKManagedObjectModel.h */,
+				490BF463AB942500F114D3B53E5197BC /* EKManagedObjectModel.m */,
+				787F7A4261678BA2C30BF990545386AC /* EKMapper.h */,
+				8C5589E227E235420F9FD84DE7FB2525 /* EKMapper.m */,
+				4353CE39D9B21D7779D7F476C2C6619C /* EKMappingBlocks.h */,
+				E1FC5F1A3236D40C3C491F9683C1CD93 /* EKMappingBlocks.m */,
+				169D8F36A14664B8CAC0071E7AE8F73F /* EKMappingProtocol.h */,
+				17D10AB981CDABEEBDDE8C7DB8BC406D /* EKObjectMapping.h */,
+				B1E4F17A80402EC9CD559DF964C42900 /* EKObjectMapping.m */,
+				CCC5631113860A968326FF56905087FF /* EKObjectModel.h */,
+				534C4E5AF8681C70D515FE3C01255263 /* EKObjectModel.m */,
+				DEF93FE486FB7E8AA04646FC9060F0F7 /* EKPropertyHelper.h */,
+				BF4756A8CA77A6CA4351B62142492203 /* EKPropertyHelper.m */,
+				2BFECA1D019DEA224E540C7EF610ABF6 /* EKPropertyMapping.h */,
+				17CA7D93E49E95908608EA5671807101 /* EKPropertyMapping.m */,
+				9AD1D07C6DE169EFCC974C1FD40F3E1B /* EKRelationshipMapping.h */,
+				8A6F3530317C0FA230EF6746372C360E /* EKRelationshipMapping.m */,
+				499D8A302F46033B591A494ADE59FA2A /* EKSerializer.h */,
+				DA114953E72CB42C32D877DA7F916B88 /* EKSerializer.m */,
+				55D7A049B574DB60BBF0170024E92DFB /* NSArray+FlattenArray.h */,
+				60357573D874C416D1BCFC745B96097C /* NSArray+FlattenArray.m */,
+				CECF9B49D5278BF3CD9D0CD0E5EEB06D /* NSDateFormatter+EasyMappingAdditions.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F49AAAE7480E35103A98486BB073572C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4971D36F51B3A6DD2E84DD485E90C1C3 /* EasyMapping.h in Headers */,
+				13A0E5351AFCEDFF0615998CFFB199FC /* EKCoreDataImporter.h in Headers */,
+				84B1A8230A225A1CEE8F97B6470A518F /* EKManagedObjectMapper.h in Headers */,
+				DCC8260C26678BFB9474403662E063F3 /* EKManagedObjectMapping.h in Headers */,
+				9E93A942346BFE897793680E86CA4C7F /* EKManagedObjectModel.h in Headers */,
+				9C8504EAEB638080BF87245BF3A8AFA8 /* EKMapper.h in Headers */,
+				FBCEBC98EA58C7842B862F11874D22B6 /* EKMappingBlocks.h in Headers */,
+				E2CC2DD90681D439EEA28C2A567B67D0 /* EKMappingProtocol.h in Headers */,
+				2D5FEE22CC8083765DCBE6CBC9C3AF9D /* EKObjectMapping.h in Headers */,
+				BD410383EC35D1C76D41FF318C42CECF /* EKObjectModel.h in Headers */,
+				2B10BC71B823A58C691CAC78D4AE9077 /* EKPropertyHelper.h in Headers */,
+				D449E0EACA2205EBB4FCDE496D71E871 /* EKPropertyMapping.h in Headers */,
+				61A252CB8AD0176AB41CB0D878479BD2 /* EKRelationshipMapping.h in Headers */,
+				887172210754DD696E52AC3BA4714B1D /* EKSerializer.h in Headers */,
+				CC4BEFD2D9963DC1297541F323A56F9D /* NSArray+FlattenArray.h in Headers */,
+				053315574651EB20A7A8EDA4D9CF243F /* NSDateFormatter+EasyMappingAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D2251DEDDE80A93C11FF0961CACBDBA /* Pods-Test_weather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7D3E29D30CB5032E415E206A5471258 /* Build configuration list for PBXNativeTarget "Pods-Test_weather" */;
+			buildPhases = (
+				2B5D8404FEA3AC6E83D3893E83A16988 /* Sources */,
+				61F9B4A1BCA3FEBBDAE62DF8DEBD10D0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FEB0133141A88B5EC50F60FDE8ACDEB /* PBXTargetDependency */,
+			);
+			name = "Pods-Test_weather";
+			productName = "Pods-Test_weather";
+			productReference = C6B7CD480427E25FEFDF47486607333F /* libPods-Test_weather.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		94B241340C55A252F10B90F387936FA0 /* EasyMapping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59E150DC0A140423841DC0941A55044C /* Build configuration list for PBXNativeTarget "EasyMapping" */;
+			buildPhases = (
+				89AF6D72E5A5FFD244947EFF48C257FA /* Sources */,
+				FB2F1DE2BA77EDDE8EAA44D83B15F2B2 /* Frameworks */,
+				F49AAAE7480E35103A98486BB073572C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyMapping;
+			productName = EasyMapping;
+			productReference = D030B6B6FD8004E267A857A56CAF730F /* libEasyMapping.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5E2FB0834AB84334C479D0CC81210BD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94B241340C55A252F10B90F387936FA0 /* EasyMapping */,
+				1D2251DEDDE80A93C11FF0961CACBDBA /* Pods-Test_weather */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B5D8404FEA3AC6E83D3893E83A16988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DFCB2628E1CF8E725B4213948B88AB9 /* Pods-Test_weather-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89AF6D72E5A5FFD244947EFF48C257FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BBA5E6F174B5FB35CEAB624346B0F1D /* EasyMapping-dummy.m in Sources */,
+				09A8DD003507F8396D4DBFB6A8AEBABA /* EKCoreDataImporter.m in Sources */,
+				3A3109C62B98C0FB4FEC3E53CA2A6DF1 /* EKManagedObjectMapper.m in Sources */,
+				5E439141DDFCDAE06C22FB47EE9D8713 /* EKManagedObjectMapping.m in Sources */,
+				D1C6E25407C1B032A1EE680271EF0374 /* EKManagedObjectModel.m in Sources */,
+				146941105C8F734BF5CD86CA88B5C245 /* EKMapper.m in Sources */,
+				D79C9C18DAE61D45D8D935B568EF77A5 /* EKMappingBlocks.m in Sources */,
+				F54D9E2DA6C9BEF9DD280FAE7E7AFE39 /* EKObjectMapping.m in Sources */,
+				52B282D683323181D3647C13970B45C2 /* EKObjectModel.m in Sources */,
+				9E31FE56190F95DF0636E9849DFC7EF2 /* EKPropertyHelper.m in Sources */,
+				C8A0C7F42FBED630ED46FB82A427A9C6 /* EKPropertyMapping.m in Sources */,
+				368B2097F8D6A4E9EE8E382D76ECCF1D /* EKRelationshipMapping.m in Sources */,
+				DD399DC45DEDF3BDA0306B84176FD99F /* EKSerializer.m in Sources */,
+				2E0D1F3FE65B5C1163FC6BFB5381F6C7 /* NSArray+FlattenArray.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FEB0133141A88B5EC50F60FDE8ACDEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EasyMapping;
+			target = 94B241340C55A252F10B90F387936FA0 /* EasyMapping */;
+			targetProxy = 357F5E607D201A8825477F42E1C50D73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		156284431C64CB05C59BDA0595A1E95A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		370D4AEF0D080B80AB8B7C213332DD63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 426EA3740830D471AFB270C9718A2E7F /* Pods-Test_weather.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		56CBEF9F340564426A8DEAFB647BD224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A42C160A24732AD7CCD69AFEDC4E99BF /* EasyMapping.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EasyMapping/EasyMapping-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C382132BB6BF8CA1A911872A2062FD0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FEE7992759C57DC71FFE741B541DA8BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB029DD31E06BDE6C2E1EA08ADF2F1B0 /* Pods-Test_weather.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FF1784549E1D55AAD84A8DD6D74F016D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A42C160A24732AD7CCD69AFEDC4E99BF /* EasyMapping.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EasyMapping/EasyMapping-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C382132BB6BF8CA1A911872A2062FD0D /* Debug */,
+				156284431C64CB05C59BDA0595A1E95A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59E150DC0A140423841DC0941A55044C /* Build configuration list for PBXNativeTarget "EasyMapping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56CBEF9F340564426A8DEAFB647BD224 /* Debug */,
+				FF1784549E1D55AAD84A8DD6D74F016D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7D3E29D30CB5032E415E206A5471258 /* Build configuration list for PBXNativeTarget "Pods-Test_weather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE7992759C57DC71FFE741B541DA8BF /* Debug */,
+				370D4AEF0D080B80AB8B7C213332DD63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
