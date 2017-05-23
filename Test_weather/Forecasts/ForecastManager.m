@@ -7,6 +7,7 @@
 //
 
 #import "ForecastManager.h"
+#import "AppDelegate.h"
 
 @interface ForecastManager ()
 
@@ -16,6 +17,12 @@
 @end
 
 @implementation ForecastManager
+
++ (ForecastManager *)applicationForecastManager
+{
+    ForecastManager *manager = ((AppDelegate *)[UIApplication sharedApplication].delegate).forecastManager;
+    return manager;
+}
 
 - (instancetype)initWithPersistanceController:(PersistenceController *)controller
 {
@@ -30,8 +37,10 @@
 
 - (void)loadForecastsForCity:(NSString *)city complition:(CallCompletion)completion
 {
+    NSManagedObjectContext *privateMOC = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    [privateMOC setParentContext:self.persistenceController.interfaceManagedObjectContext];
     GetForecastOperation *operation = [[GetForecastOperation alloc] initWithAPIManager:[ApiManager new]
-                                                                                     context:self.persistenceController.interfaceManagedObjectContext];
+                                                                                     context:privateMOC];
     operation.city = city;
     WEAK_SELF weakSelf = self;
     operation.completion = ^(BOOL status, NSError *error) {

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *city;
 @property (nonatomic) int16_t humidity;
 @property (nonatomic) int16_t pressure;
-@property (nonatomic) int16_t unique;
+@property (nonatomic) int64_t unique;
 @property (nonatomic) float temp;
 @property (nullable, nonatomic, copy) NSDate *date;
 

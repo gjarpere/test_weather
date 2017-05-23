@@ -59,7 +59,8 @@
     for (int i = 0; i < self.items.count; i++)
     {
         NSMutableDictionary *resultItem = ((NSDictionary *)self.items[i]).mutableCopy;
-        NSNumber *primaryKey = [NSNumber numberWithInt:[[NSString stringWithFormat:@"%@%@",cityCode, resultItem[kDatePath]] intValue]];
+        NSString *str = [NSString stringWithFormat:@"%@%@",cityCode, resultItem[kDatePath]];
+        NSNumber *primaryKey = [NSNumber numberWithUnsignedInteger:[str integerValue]];
         [resultItem setObject:primaryKey forKey:kUnique];
         [resultItem setObject:city forKey:kCity];
         [resultArray addObject:resultItem];
@@ -71,11 +72,9 @@
 
 - (void)mapItems {
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:kCityForecastEntity];
-    
-    self.mappedItems = (NSArray<CityForecast *> *)[EKManagedObjectMapper syncArrayOfObjectsFromExternalRepresentation:self.items
+    self.mappedItems = (NSArray<CityForecast *> *)[EKManagedObjectMapper arrayOfObjectsFromExternalRepresentation:self.items
                                                                                                       withMapping:[CityForecast objectMapping]
-                                                                                                     fetchRequest:fetchRequest                 inManagedObjectContext:self.workingContext];
+                                                                                                                    inManagedObjectContext:self.workingContext];
     if (self.isCancelled) {
         return;
     }

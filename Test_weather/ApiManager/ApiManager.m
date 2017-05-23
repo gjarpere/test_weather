@@ -12,7 +12,7 @@
 
 - (void)getForecastForCity:(NSString *)city completion:(CallCompletionWhithResponse)completion
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@?%@=%@,%@&%@=%@", kForecastURL,kQuery, city, kCountryCode, kAppIdParameter, kAppId];
+    NSString *urlString = [NSString stringWithFormat:@"%@?%@=%@,%@&%@=%@&%@=%@", kForecastURL,kQuery, city, kCountryCode, kAppIdParameter, kAppId, kUnits, kMetric];
     NSURL *URL = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSURLRequest requestWithURL:URL].mutableCopy;
     [request setHTTPMethod:@"GET"];

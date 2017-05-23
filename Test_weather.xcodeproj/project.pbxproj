@@ -23,6 +23,14 @@
 		31FBA3F21ED42F8B003F6CCD /* CityForecast+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA3F01ED42F8B003F6CCD /* CityForecast+CoreDataProperties.m */; };
 		31FBA3F61ED43825003F6CCD /* DateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA3F51ED43825003F6CCD /* DateHelper.m */; };
 		31FBA3FA1ED43AC0003F6CCD /* ForecastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA3F91ED43AC0003F6CCD /* ForecastManager.m */; };
+		31FBA3FE1ED44D50003F6CCD /* ForecastTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA3FC1ED44D50003F6CCD /* ForecastTableViewCell.m */; };
+		31FBA3FF1ED44D50003F6CCD /* ForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31FBA3FD1ED44D50003F6CCD /* ForecastTableViewCell.xib */; };
+		31FBA4021ED4561D003F6CCD /* ForecastDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA4011ED4561D003F6CCD /* ForecastDataSource.m */; };
+		31FBA4081ED464AA003F6CCD /* CityPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA4071ED464AA003F6CCD /* CityPickerViewController.m */; };
+		31FBA40C1ED46CFB003F6CCD /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA40A1ED46CFB003F6CCD /* CityTableViewCell.m */; };
+		31FBA40D1ED46CFB003F6CCD /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31FBA40B1ED46CFB003F6CCD /* CityTableViewCell.xib */; };
+		31FBA4111ED4720A003F6CCD /* WeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA4101ED4720A003F6CCD /* WeatherTableViewCell.m */; };
+		31FBA4141ED4756A003F6CCD /* CityPickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FBA4131ED4756A003F6CCD /* CityPickerDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +63,20 @@
 		31FBA3F51ED43825003F6CCD /* DateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateHelper.m; path = "Date Helper/DateHelper.m"; sourceTree = "<group>"; };
 		31FBA3F81ED43AC0003F6CCD /* ForecastManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForecastManager.h; path = Forecasts/ForecastManager.h; sourceTree = "<group>"; };
 		31FBA3F91ED43AC0003F6CCD /* ForecastManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForecastManager.m; path = Forecasts/ForecastManager.m; sourceTree = "<group>"; };
+		31FBA3FB1ED44D50003F6CCD /* ForecastTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastTableViewCell.h; sourceTree = "<group>"; };
+		31FBA3FC1ED44D50003F6CCD /* ForecastTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastTableViewCell.m; sourceTree = "<group>"; };
+		31FBA3FD1ED44D50003F6CCD /* ForecastTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForecastTableViewCell.xib; sourceTree = "<group>"; };
+		31FBA4001ED4561D003F6CCD /* ForecastDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastDataSource.h; sourceTree = "<group>"; };
+		31FBA4011ED4561D003F6CCD /* ForecastDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastDataSource.m; sourceTree = "<group>"; };
+		31FBA4061ED464AA003F6CCD /* CityPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityPickerViewController.h; path = CityPicker/CityPickerViewController.h; sourceTree = "<group>"; };
+		31FBA4071ED464AA003F6CCD /* CityPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityPickerViewController.m; path = CityPicker/CityPickerViewController.m; sourceTree = "<group>"; };
+		31FBA4091ED46CFB003F6CCD /* CityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityTableViewCell.h; path = CityPicker/CityTableViewCell.h; sourceTree = "<group>"; };
+		31FBA40A1ED46CFB003F6CCD /* CityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityTableViewCell.m; path = CityPicker/CityTableViewCell.m; sourceTree = "<group>"; };
+		31FBA40B1ED46CFB003F6CCD /* CityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CityTableViewCell.xib; path = CityPicker/CityTableViewCell.xib; sourceTree = "<group>"; };
+		31FBA40F1ED4720A003F6CCD /* WeatherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherTableViewCell.h; path = "Basic Classes/WeatherTableViewCell.h"; sourceTree = "<group>"; };
+		31FBA4101ED4720A003F6CCD /* WeatherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherTableViewCell.m; path = "Basic Classes/WeatherTableViewCell.m"; sourceTree = "<group>"; };
+		31FBA4121ED4756A003F6CCD /* CityPickerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityPickerDataSource.h; path = CityPicker/CityPickerDataSource.h; sourceTree = "<group>"; };
+		31FBA4131ED4756A003F6CCD /* CityPickerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityPickerDataSource.m; path = CityPicker/CityPickerDataSource.m; sourceTree = "<group>"; };
 		36D62551C4CB08BF3E1EA053 /* Pods-Test_weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test_weather.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test_weather/Pods-Test_weather.release.xcconfig"; sourceTree = "<group>"; };
 		5D49A56C318F973C43E5D93D /* Pods-Test_weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test_weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test_weather/Pods-Test_weather.debug.xcconfig"; sourceTree = "<group>"; };
 		F057FD351531B105DA9C58F5 /* libPods-Test_weather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Test_weather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,15 +115,15 @@
 		31144AA01ED31E1300508F83 /* Test_weather */ = {
 			isa = PBXGroup;
 			children = (
+				31FBA40E1ED471A8003F6CCD /* Basic Classes */,
+				31FBA4051ED4640F003F6CCD /* City Picker */,
 				31FBA3F71ED4398C003F6CCD /* Forecasts */,
 				31FBA3F31ED437F4003F6CCD /* Date Helper */,
 				31FBA3E21ED41B61003F6CCD /* Api Manager */,
 				31FBA3D21ED40409003F6CCD /* Persistence Controller */,
 				31144AA41ED31E1300508F83 /* AppDelegate.h */,
 				31144AA51ED31E1300508F83 /* AppDelegate.m */,
-				31144AA71ED31E1300508F83 /* ViewController.h */,
 				31144AAA1ED31E1300508F83 /* Main.storyboard */,
-				31144AA81ED31E1300508F83 /* ViewController.m */,
 				31144AB01ED31E1300508F83 /* Assets.xcassets */,
 				31144AB21ED31E1300508F83 /* LaunchScreen.storyboard */,
 				31144AB51ED31E1300508F83 /* Info.plist */,
@@ -175,10 +197,48 @@
 		31FBA3F71ED4398C003F6CCD /* Forecasts */ = {
 			isa = PBXGroup;
 			children = (
+				31144AA71ED31E1300508F83 /* ViewController.h */,
+				31144AA81ED31E1300508F83 /* ViewController.m */,
+				31FBA3FB1ED44D50003F6CCD /* ForecastTableViewCell.h */,
+				31FBA3FC1ED44D50003F6CCD /* ForecastTableViewCell.m */,
+				31FBA3FD1ED44D50003F6CCD /* ForecastTableViewCell.xib */,
+				31FBA4001ED4561D003F6CCD /* ForecastDataSource.h */,
+				31FBA4011ED4561D003F6CCD /* ForecastDataSource.m */,
+				31FBA4031ED463F5003F6CCD /* Forecast Manager */,
+			);
+			name = Forecasts;
+			sourceTree = "<group>";
+		};
+		31FBA4031ED463F5003F6CCD /* Forecast Manager */ = {
+			isa = PBXGroup;
+			children = (
 				31FBA3F81ED43AC0003F6CCD /* ForecastManager.h */,
 				31FBA3F91ED43AC0003F6CCD /* ForecastManager.m */,
 			);
-			name = Forecasts;
+			name = "Forecast Manager";
+			sourceTree = "<group>";
+		};
+		31FBA4051ED4640F003F6CCD /* City Picker */ = {
+			isa = PBXGroup;
+			children = (
+				31FBA4061ED464AA003F6CCD /* CityPickerViewController.h */,
+				31FBA4071ED464AA003F6CCD /* CityPickerViewController.m */,
+				31FBA4121ED4756A003F6CCD /* CityPickerDataSource.h */,
+				31FBA4131ED4756A003F6CCD /* CityPickerDataSource.m */,
+				31FBA4091ED46CFB003F6CCD /* CityTableViewCell.h */,
+				31FBA40A1ED46CFB003F6CCD /* CityTableViewCell.m */,
+				31FBA40B1ED46CFB003F6CCD /* CityTableViewCell.xib */,
+			);
+			name = "City Picker";
+			sourceTree = "<group>";
+		};
+		31FBA40E1ED471A8003F6CCD /* Basic Classes */ = {
+			isa = PBXGroup;
+			children = (
+				31FBA40F1ED4720A003F6CCD /* WeatherTableViewCell.h */,
+				31FBA4101ED4720A003F6CCD /* WeatherTableViewCell.m */,
+			);
+			name = "Basic Classes";
 			sourceTree = "<group>";
 		};
 		4DD48DFAC4F633731F18E4F2 /* Frameworks */ = {
@@ -259,6 +319,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31FBA40D1ED46CFB003F6CCD /* CityTableViewCell.xib in Resources */,
+				31FBA3FF1ED44D50003F6CCD /* ForecastTableViewCell.xib in Resources */,
 				31144AB41ED31E1300508F83 /* LaunchScreen.storyboard in Resources */,
 				31144AB11ED31E1300508F83 /* Assets.xcassets in Resources */,
 				31144AAC1ED31E1300508F83 /* Main.storyboard in Resources */,
@@ -327,11 +389,17 @@
 				31144AA91ED31E1300508F83 /* ViewController.m in Sources */,
 				31FBA3F21ED42F8B003F6CCD /* CityForecast+CoreDataProperties.m in Sources */,
 				31FBA3FA1ED43AC0003F6CCD /* ForecastManager.m in Sources */,
+				31FBA4021ED4561D003F6CCD /* ForecastDataSource.m in Sources */,
+				31FBA3FE1ED44D50003F6CCD /* ForecastTableViewCell.m in Sources */,
 				31144AA61ED31E1300508F83 /* AppDelegate.m in Sources */,
+				31FBA40C1ED46CFB003F6CCD /* CityTableViewCell.m in Sources */,
+				31FBA4111ED4720A003F6CCD /* WeatherTableViewCell.m in Sources */,
 				31FBA3E91ED422E4003F6CCD /* ApiOperation.m in Sources */,
+				31FBA4081ED464AA003F6CCD /* CityPickerViewController.m in Sources */,
 				31FBA3D81ED40480003F6CCD /* PersistenceController.m in Sources */,
 				31FBA3F61ED43825003F6CCD /* DateHelper.m in Sources */,
 				31144AA31ED31E1300508F83 /* main.m in Sources */,
+				31FBA4141ED4756A003F6CCD /* CityPickerDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

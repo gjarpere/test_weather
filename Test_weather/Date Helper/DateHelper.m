@@ -21,5 +21,12 @@
     return date;
 }
 
++ (NSString *)verboseLocalDateString:(NSDate *)date
+{
+    NSDateFormatter *dateToStringFormatter = [NSDateFormatter new];
+    dateToStringFormatter.dateFormat = @"dd/M/YYYY'";
+    
+    return [dateToStringFormatter stringFromDate:date];
+}
 
 @end

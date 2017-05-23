@@ -10,8 +10,11 @@
 #import "ApiManager.h"
 #import "PersistenceController.h"
 #import "GetForecastOperation.h"
+//#import "AppDelegate.h"
 
 @interface ForecastManager : NSObject
+
++ (ForecastManager *)applicationForecastManager;
 
 - (instancetype)initWithPersistanceController:(PersistenceController *)controller;
 - (void)loadForecastsForCity:(NSString *)city complition:(CallCompletion)completion;

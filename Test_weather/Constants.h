@@ -14,6 +14,10 @@
 
 #endif /* Constants_h */
 
+#pragma mark - Notofications -
+
+static NSString * const kCitySelectedNotification   = @"citySelectedNotification";
+
 #pragma mark - Entities -
 
 static NSString * const kCityForecastEntity          = @"CityForecast";
@@ -34,12 +38,15 @@ static NSString * const kHumidityPath                = @"humidity";
 static NSString * const kPressurePath                = @"pressure";
 static NSString * const kDatePath                    = @"dt";
 
+static NSString * const kCurrentCity                 = @"currentCity";
 static NSString * const kList                        = @"list";
-
 
 static NSString * const kQuery                       = @"q";
 static NSString * const kAppIdParameter              = @"appid";
 static NSString * const kCountryCode                 = @"ua";
+static NSString * const kUnits                       = @"units";
+static NSString * const kMetric                      = @"metric";
+
 
 #pragma mark - URLs -
 

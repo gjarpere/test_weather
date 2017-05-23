@@ -24,10 +24,15 @@
     [self.persistenceController initializeCoreDataWithComplitionBlock:^{
         STRONG_SELF strongSelf = weakSelf;
         strongSelf.forecastManager = [[ForecastManager alloc] initWithPersistanceController:strongSelf.persistenceController];
-        [strongSelf.forecastManager loadForecastsForCity:kLviv
+        NSString *currentCityName = [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentCity];
+        if(currentCityName == nil){
+            currentCityName = kLviv;
+            [[NSUserDefaults standardUserDefaults] setObject:currentCityName forKey:kCurrentCity];
+        }
+        [strongSelf.forecastManager loadForecastsForCity:currentCityName
                                               complition:^(BOOL status, NSError *error) {
             if (!status) {
-                NSLog(@"Error while loading programs: %@", error);
+                NSLog(@"Error while loading forecast: %@", error);
             }
         }];
 

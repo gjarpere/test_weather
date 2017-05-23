@@ -1,5 +1,5 @@
 //
-//  DateHelper.h
+//  ForecastDataSource.h
 //  Test_weather
 //
 //  Created by Aleksandr Martynov on 5/23/17.
@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface DateHelper : NSObject
+@interface ForecastDataSource : NSObject <UITableViewDataSource>
 
-+ (NSDate *)forecastDateFromString:(NSString *)string;
-+ (NSString *)verboseLocalDateString:(NSDate *)date;
+@property (nonatomic, weak) UITableView *tableView;
 
 @end
