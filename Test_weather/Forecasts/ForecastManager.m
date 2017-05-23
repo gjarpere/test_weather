@@ -24,8 +24,7 @@
     return manager;
 }
 
-- (instancetype)initWithPersistanceController:(PersistenceController *)controller
-{
+- (instancetype)initWithPersistanceController:(PersistenceController *)controller { // instancetype. what is it? {
     if (self = [super init]) {
         _persistenceController = controller;
         _operationQueue = [[NSOperationQueue alloc] init];
@@ -35,20 +34,18 @@
     return self;
 }
 
-- (void)loadForecastsForCity:(NSString *)city complition:(CallCompletion)completion
-{
+- (void)loadForecastsForCity:(NSString *)city complition:(CallCompletion)completion {
     NSManagedObjectContext *privateMOC = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
     [privateMOC setParentContext:self.persistenceController.interfaceManagedObjectContext];
     GetForecastOperation *operation = [[GetForecastOperation alloc] initWithAPIManager:[ApiManager new]
                                                                                      context:privateMOC];
     operation.city = city;
-    WEAK_SELF weakSelf = self;
+    WEAK_SELF weakSelf = self; // cool
     operation.completion = ^(BOOL status, NSError *error) {
         [weakSelf.persistenceController save];
         completion(status, error);
     };
     [_operationQueue addOperation:operation];
 }
-
 
 @end

@@ -23,12 +23,11 @@
 
 @implementation ForecastDataSource
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     
     if (self) {
-        _uiContext = [PersistenceController applicationPersistenceController].interfaceManagedObjectContext;
+        _uiContext = [PersistenceController applicationPersistenceController].interfaceManagedObjectContext;// what is this _uiContext?????? why not self.????
         [self prepareFetchedResultsController];
          [self startListeningForNotifications];
     }
@@ -36,34 +35,29 @@
     return self;
 }
 
-- (void)prepareFetchedResultsController
-{
+- (void)prepareFetchedResultsController {
     NSError *error;
     if (![[self fetchedResultsController] performFetch:&error]) {
         NSLog(@"TSEProgramTableViewDataSource: error while fetching results: %@", error);
     }
 }
 
-- (void)cityUpdated
-{
+- (void)cityUpdated {
     [self prepareFetchedResultsController];
     [_fetchedResultsController performFetch:nil];
     [_tableView reloadData];
 
 }
 
-- (void)startListeningForNotifications
-{
+- (void)startListeningForNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cityUpdated) name:kCitySelectedNotification object:nil];
 }
 
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self]; // fuck
 }
 
-- (NSFetchedResultsController *)fetchedResultsController
-{
+- (NSFetchedResultsController *)fetchedResultsController {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
                                    entityForName:kCityForecastEntity inManagedObjectContext:_uiContext];
@@ -91,37 +85,32 @@
 
 #pragma mark -- Table View Delegate/Data Source --
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     id  sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
     
     return [sectionInfo numberOfObjects];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ForecastTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[ForecastTableViewCell reuseIdentifier] forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
 
-- (void)configureCell:(ForecastTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
+- (void)configureCell:(ForecastTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     CityForecast *forecast = [_fetchedResultsController objectAtIndexPath:indexPath];
     [cell prepareCellWithForecast:forecast];
 }
 
 #pragma mark -- Fetch Controller Delegate --
 
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
-{
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView beginUpdates];
 }
 
-- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
-{
-    UITableView *tableView = self.tableView;
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    UITableView *tableView = self.tableView; //for what local variable? why not _tableView???
     
     switch(type) {
             

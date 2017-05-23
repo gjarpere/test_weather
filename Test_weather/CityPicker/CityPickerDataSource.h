@@ -11,8 +11,8 @@
 
 @interface CityPickerDataSource : NSObject <UITableViewDataSource>
 
-@property (nonatomic) NSArray *citiesArray;
+@property (nonatomic) NSArray *citiesArray; // what is nonatomic?
 
-@property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, weak) UITableView *tableView;// for what is weak???
 
 @end

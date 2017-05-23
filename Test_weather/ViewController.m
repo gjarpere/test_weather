@@ -21,40 +21,34 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self startListeningForNotifications];
+    [self startListeningForNotifications]; //  why in this menthod???
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self setupTableView];
     [self updateCityButton];
 }
 
-- (void)setupTableView
-{
+- (void)setupTableView {
     [self.tableView registerNib:[UINib nibWithNibName:[ForecastTableViewCell reuseIdentifier] bundle:[NSBundle bundleForClass:[self class]]] forCellReuseIdentifier:[ForecastTableViewCell reuseIdentifier]];
     self.tableViewDataSource = [ForecastDataSource new];
     self.tableViewDataSource.tableView = self.tableView;
     self.tableView.dataSource  = self.tableViewDataSource;
 }
 
-- (void)startListeningForNotifications
-{
+- (void)startListeningForNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCityButton) name:kCitySelectedNotification object:nil];
 }
 
-- (void)dealloc
-{
+- (void)dealloc { // why if we have super class? i am talking about this method
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)updateCityButton
-{
+- (void)updateCityButton {
   NSString *currentCityName = [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentCity];
     [self.cityButton setTitle:currentCityName forState:UIControlStateNormal];
     [self.tableView reloadData];

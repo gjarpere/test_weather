@@ -12,7 +12,7 @@
 
 + (NSDate *)forecastDateFromString:(NSString *)string
 {
-    if ([string isKindOfClass:[NSNull class]]) {
+    if ([string isKindOfClass:[NSNull class]]) { // its not a helper (really) just as is
         return nil;
     }
     int unixTime = string.intValue;
@@ -24,7 +24,7 @@
 + (NSString *)verboseLocalDateString:(NSDate *)date
 {
     NSDateFormatter *dateToStringFormatter = [NSDateFormatter new];
-    dateToStringFormatter.dateFormat = @"dd/M/YYYY'";
+    dateToStringFormatter.dateFormat = @"dd/M/YYYY'";// funny fot helper
     
     return [dateToStringFormatter stringFromDate:date];
 }

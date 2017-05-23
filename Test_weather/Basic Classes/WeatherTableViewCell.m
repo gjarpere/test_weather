@@ -12,7 +12,7 @@
 
 + (NSString *)reuseIdentifier
 {
-    return NSStringFromClass([self class]);
+    return NSStringFromClass([self class]);// why not category?
 }
 
 @end

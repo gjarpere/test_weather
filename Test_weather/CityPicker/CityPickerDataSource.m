@@ -17,8 +17,7 @@
 @implementation CityPickerDataSource
 
 
--(instancetype)init
-{
+-(instancetype)init {
     self = [super init];
     
     if(self){
@@ -28,21 +27,18 @@
     return self;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.citiesArray.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[CityTableViewCell reuseIdentifier] forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
 
-- (void)configureCell:(CityTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
+- (void)configureCell:(CityTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     [cell prepareCellWithName:self.citiesArray[indexPath.row]];
 }
 

@@ -21,21 +21,18 @@
 
 @implementation CityPickerViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     [self setupView];
     [self setupTableView];
 }
 
-- (void)setupView
-{
+- (void)setupView {
     self.cancelRecognizer.delegate = self;
     [self.cancelRecognizer addTarget:self action:@selector(dismiss)];
 }
 
-- (void)setupTableView
-{
+- (void)setupTableView { //why hibs?
     [self.tableView registerNib:[UINib nibWithNibName:[CityTableViewCell reuseIdentifier] bundle:[NSBundle bundleForClass:[self class]]] forCellReuseIdentifier:[CityTableViewCell reuseIdentifier]];
     self.tableViewDataSource = [CityPickerDataSource new];
     self.tableViewDataSource.tableView = self.tableView;
@@ -44,36 +41,33 @@
     [self.tableView reloadData];
 }
 
-- (void)dismiss
-{
+- (void)dismiss {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)loadForecastForSelectedCity:(NSString *)cityName
-{
+- (void)loadForecastForSelectedCity:(NSString *)cityName {
     [[ForecastManager applicationForecastManager] loadForecastsForCity:cityName complition:^(BOOL status, NSError *error) {
         if (!status) {
-            NSLog(@"Error while loading forecast: %@", error);
+            NSLog(@"Error while loading forecast: %@", error); // nslog cannot be used in production
         }
     }];
 }
 
 #pragma mark - Gesture Recognizer Delegate -
 
-- (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-{
-    if (CGRectContainsPoint(self.tableView.bounds, [touch locationInView:self.tableView]))
+- (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if (CGRectContainsPoint(self.tableView.bounds, [touch locationInView:self.tableView])) {
         return NO;
+    }
     
     return YES;
 }
 
 #pragma mark - Table View Delegate -
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *selectedCity = self.tableViewDataSource.citiesArray[indexPath.row];
-    [[NSUserDefaults standardUserDefaults] setObject: selectedCity forKey:kCurrentCity];
+    [[NSUserDefaults standardUserDefaults] setObject: selectedCity forKey:kCurrentCity]; // for what userdefaults ????
     [self loadForecastForSelectedCity:selectedCity];
     [[NSNotificationCenter defaultCenter]postNotificationName:kCitySelectedNotification object:nil];
     [self dismiss];

@@ -12,7 +12,6 @@
 
 @interface ForecastTableViewCell : WeatherTableViewCell
 
-
 - (void)prepareCellWithForecast:(CityForecast *)forecast;
 
 @end
