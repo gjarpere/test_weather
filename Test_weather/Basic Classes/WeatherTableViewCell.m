@@ -10,9 +10,8 @@
 
 @implementation WeatherTableViewCell
 
-+ (NSString *)reuseIdentifier
-{
-    return NSStringFromClass([self class]);// why not category?
++ (NSString *)reuseIdentifier {
+    return NSStringFromClass([self class]);
 }
 
 @end

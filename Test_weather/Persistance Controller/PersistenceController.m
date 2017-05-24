@@ -25,13 +25,11 @@
 
 @implementation PersistenceController
 
-+ (PersistenceController *)applicationPersistenceController
-{
++ (PersistenceController *)applicationPersistenceController {
     return [(AppDelegate *)[[UIApplication sharedApplication] delegate] persistenceController];
 }
 
-- (instancetype) initWhithStoreType:(NSString *)storeType
-{
+- (instancetype) initWhithStoreType:(NSString *)storeType {
     self = [super init];
     
     if (self) {
@@ -41,8 +39,7 @@
     return self;
 }
 
-- (void)initializeCoreDataWithComplitionBlock:(InitCompletionBlock)completion
-{
+- (void)initializeCoreDataWithComplitionBlock:(InitCompletionBlock)completion {
     if (TSEiOSVersion < 10) {
         if ([self interfaceManagedObjectContext]) {
             return;
@@ -75,7 +72,7 @@
             if (error) {
                 NSLog(@"ENPersistenceController: error while adding persistantController: %@", error);
             }
-            completion(); // if comletion block nil?
+            completion();
         });
     } else {
         NSPersistentContainer *container = [NSPersistentContainer persistentContainerWithName:@"Test_weather"];
@@ -92,8 +89,7 @@
     }
 }
 
-- (void)save
-{
+- (void)save {
     if (![[self privateContext] hasChanges] && ![[self interfaceManagedObjectContext] hasChanges]) {
         return;
     }
@@ -108,7 +104,6 @@
             }];
         } else {
             NSLog(@"ENPersistenceController: error while saving interfaceManagedObjectContext: %@", error);
-            
         }
     }];
 }

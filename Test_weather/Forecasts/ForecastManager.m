@@ -18,13 +18,12 @@
 
 @implementation ForecastManager
 
-+ (ForecastManager *)applicationForecastManager
-{
++ (ForecastManager *)applicationForecastManager {
     ForecastManager *manager = ((AppDelegate *)[UIApplication sharedApplication].delegate).forecastManager;
     return manager;
 }
 
-- (instancetype)initWithPersistanceController:(PersistenceController *)controller { // instancetype. what is it? {
+- (instancetype)initWithPersistanceController:(PersistenceController *)controller {
     if (self = [super init]) {
         _persistenceController = controller;
         _operationQueue = [[NSOperationQueue alloc] init];
@@ -40,7 +39,7 @@
     GetForecastOperation *operation = [[GetForecastOperation alloc] initWithAPIManager:[ApiManager new]
                                                                                      context:privateMOC];
     operation.city = city;
-    WEAK_SELF weakSelf = self; // cool
+    WEAK_SELF weakSelf = self;
     operation.completion = ^(BOOL status, NSError *error) {
         [weakSelf.persistenceController save];
         completion(status, error);

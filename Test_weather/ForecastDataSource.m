@@ -27,9 +27,9 @@
     self = [super init];
     
     if (self) {
-        _uiContext = [PersistenceController applicationPersistenceController].interfaceManagedObjectContext;// what is this _uiContext?????? why not self.????
+        self.uiContext = [PersistenceController applicationPersistenceController].interfaceManagedObjectContext;
         [self prepareFetchedResultsController];
-         [self startListeningForNotifications];
+        [self startListeningForNotifications];
     }
     
     return self;
@@ -54,7 +54,7 @@
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self]; // fuck
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (NSFetchedResultsController *)fetchedResultsController {
@@ -110,7 +110,7 @@
 }
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
-    UITableView *tableView = self.tableView; //for what local variable? why not _tableView???
+    UITableView *tableView = self.tableView;
     
     switch(type) {
             
@@ -135,8 +135,7 @@
     }
 }
 
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id )sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
-{
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id )sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
     switch(type) {
         case NSFetchedResultsChangeInsert:
             [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
@@ -150,8 +149,7 @@
     }
 }
 
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView endUpdates];
 }
 

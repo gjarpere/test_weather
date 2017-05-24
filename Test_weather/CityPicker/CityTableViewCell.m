@@ -16,8 +16,7 @@
 
 @implementation CityTableViewCell
 
-- (void)prepareCellWithName:(NSString *)cityName
-{
+- (void)prepareCellWithName:(NSString *)cityName {
     self.cityNameLabel.text = cityName;
 }
 

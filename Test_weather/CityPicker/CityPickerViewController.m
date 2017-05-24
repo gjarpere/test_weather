@@ -32,7 +32,7 @@
     [self.cancelRecognizer addTarget:self action:@selector(dismiss)];
 }
 
-- (void)setupTableView { //why hibs?
+- (void)setupTableView { 
     [self.tableView registerNib:[UINib nibWithNibName:[CityTableViewCell reuseIdentifier] bundle:[NSBundle bundleForClass:[self class]]] forCellReuseIdentifier:[CityTableViewCell reuseIdentifier]];
     self.tableViewDataSource = [CityPickerDataSource new];
     self.tableViewDataSource.tableView = self.tableView;

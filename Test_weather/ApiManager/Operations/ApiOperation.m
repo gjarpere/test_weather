@@ -29,61 +29,51 @@
 
 #pragma mark - Events
 
-- (void)didStartOperation
-{
+- (void)didStartOperation {
     [self setupLoadingState];
 }
 
-- (void)didFinishOperation
-{
+- (void)didFinishOperation {
     [self setupFinishedState];
 }
 
-- (void)didFailOperationWithError:(NSError *)error
-{
+- (void)didFailOperationWithError:(NSError *)error {
     self.error = error;
     [self setupFinishedState];
 }
 
-- (void)didCancelOperation
-{
+- (void)didCancelOperation {
     [self setupFinishedState];
 }
 
 #pragma mark - Operation States
 
-- (void)setupLoadingState
-{
+- (void)setupLoadingState {
     [self setIsExecuting:YES];
     [self setIsFinished:NO];
 }
 
-- (void)setupFinishedState
-{
+- (void)setupFinishedState {
     [self setIsExecuting:NO];
     [self setIsFinished:YES];
 }
 
 #pragma mark - Setup
 
-+ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key
-{
++ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
     return YES;
 }
 
-- (BOOL)isAsynchronous
-{
+- (BOOL)isAsynchronous {
     return YES;
 }
 
-- (void)cancel
-{
+- (void)cancel {
     [self didCancelOperation];
     [super cancel];
 }
 
-- (void)start
-{
+- (void)start {
     if (self.isCancelled) {
         return;
     }

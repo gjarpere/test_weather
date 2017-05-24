@@ -20,7 +20,7 @@
 -(instancetype)init {
     self = [super init];
     
-    if(self){
+    if (self) {
         self.citiesArray = @[kLviv, kVinnytsya];
     }
     

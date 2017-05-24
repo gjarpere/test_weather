@@ -32,8 +32,7 @@
 
 #pragma mark - Loading data
 
-- (void)loadForecast
-{
+- (void)loadForecast {
     WEAK_SELF weakSelf = self;
     [self.workingContext performBlock:^{
         STRONG_SELF strongSelf = weakSelf;
@@ -53,8 +52,7 @@
     }];
 }
 
-- (void)prepareInitialArrayForCity:(NSString *)city cityCode:(NSNumber *)cityCode
-{
+- (void)prepareInitialArrayForCity:(NSString *)city cityCode:(NSNumber *)cityCode {
     NSMutableArray *resultArray =@[].mutableCopy;
     for (int i = 0; i < self.items.count; i++)
     {

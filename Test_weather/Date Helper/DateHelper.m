@@ -10,9 +10,8 @@
 
 @implementation DateHelper
 
-+ (NSDate *)forecastDateFromString:(NSString *)string
-{
-    if ([string isKindOfClass:[NSNull class]]) { // its not a helper (really) just as is
++ (NSDate *)forecastDateFromString:(NSString *)string {
+    if ([string isKindOfClass:[NSNull class]]) {
         return nil;
     }
     int unixTime = string.intValue;
@@ -21,11 +20,9 @@
     return date;
 }
 
-+ (NSString *)verboseLocalDateString:(NSDate *)date
-{
++ (NSString *)verboseLocalDateString:(NSDate *)date {
     NSDateFormatter *dateToStringFormatter = [NSDateFormatter new];
-    dateToStringFormatter.dateFormat = @"dd/M/YYYY'";// funny fot helper
-    
+    dateToStringFormatter.dateFormat = @"dd/M/YYYY'";    
     return [dateToStringFormatter stringFromDate:date];
 }
 

@@ -21,7 +21,7 @@
 @implementation ForecastTableViewCell
 
 - (void)prepareCellWithForecast:(CityForecast *)forecast {
-    self.tempLabel.text = [NSString stringWithFormat:@"%.1f C", forecast.temp]; // it should be in settings (as for me)
+    self.tempLabel.text = [NSString stringWithFormat:@"%.1f C", forecast.temp];
     self.pressureLabel.text = [NSString stringWithFormat:@"%d hPa", forecast.pressure];
     self.humidLabel.text = [NSString stringWithFormat:@"%d %%", forecast.humidity];
     self.dateLabel.text = [DateHelper verboseLocalDateString:forecast.date];

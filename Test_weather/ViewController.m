@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self startListeningForNotifications]; //  why in this menthod???
+    [self startListeningForNotifications];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -44,7 +44,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCityButton) name:kCitySelectedNotification object:nil];
 }
 
-- (void)dealloc { // why if we have super class? i am talking about this method
+- (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
