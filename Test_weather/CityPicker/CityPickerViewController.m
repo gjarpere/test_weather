@@ -48,7 +48,7 @@
 - (void)loadForecastForSelectedCity:(NSString *)cityName {
     [[ForecastManager applicationForecastManager] loadForecastsForCity:cityName complition:^(BOOL status, NSError *error) {
         if (!status) {
-            NSLog(@"Error while loading forecast: %@", error); // nslog cannot be used in production
+            DLog(@"Error while loading forecast: %@", error); // nslog cannot be used in production
         }
     }];
 }

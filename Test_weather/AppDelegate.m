@@ -32,7 +32,7 @@
         [strongSelf.forecastManager loadForecastsForCity:currentCityName
                                               complition:^(BOOL status, NSError *error) {
             if (!status) {
-                NSLog(@"Error while loading forecast: %@", error);
+                DLog(@"Error while loading forecast: %@", error);
             }
         }];
 

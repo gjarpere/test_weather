@@ -38,7 +38,7 @@
 - (void)prepareFetchedResultsController {
     NSError *error;
     if (![[self fetchedResultsController] performFetch:&error]) {
-        NSLog(@"TSEProgramTableViewDataSource: error while fetching results: %@", error);
+        DLog(@"TSEProgramTableViewDataSource: error while fetching results: %@", error);
     }
 }
 

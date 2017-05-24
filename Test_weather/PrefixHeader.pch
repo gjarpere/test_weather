@@ -11,11 +11,19 @@
 
 #import "Constants.h"
 
+
 #define WEAK_SELF __weak __typeof(self)
 #define STRONG_SELF __strong __typeof(self)
 
 #define SAFE_BLOCK(block, ...) block ? block(__VA_ARGS__) : nil
 
-#define TSEiOSVersion      [[[UIDevice currentDevice] systemVersion] floatValue]
+#define iOSVersion      [[[UIDevice currentDevice] systemVersion] floatValue]
+
+#ifdef DEBUG
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define DLog(...)
+#define NSLog(...)
+#endif
 
 #endif /* PrefixHeader_pch */

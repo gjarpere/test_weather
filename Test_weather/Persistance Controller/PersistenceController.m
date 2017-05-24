@@ -40,11 +40,11 @@
 }
 
 - (void)initializeCoreDataWithComplitionBlock:(InitCompletionBlock)completion {
-    if (TSEiOSVersion < 10) {
+    if (iOSVersion < 10) {
         if ([self interfaceManagedObjectContext]) {
             return;
         }
-        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Test_weather" withExtension:@"momd"];//?)))
+        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Test_weather" withExtension:@"momd"];
         NSManagedObjectModel *mom = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
         NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
         [self setInterfaceManagedObjectContext:[[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType]];
@@ -70,9 +70,11 @@
                                     options:options
                                       error:&error];
             if (error) {
-                NSLog(@"ENPersistenceController: error while adding persistantController: %@", error);
+                DLog(@"ENPersistenceController: error while adding persistantController: %@", error);
             }
-            completion();
+            
+            SAFE_BLOCK(completion);
+            
         });
     } else {
         NSPersistentContainer *container = [NSPersistentContainer persistentContainerWithName:@"Test_weather"];
@@ -80,12 +82,12 @@
         self.container = container;
         [container loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
             if (error) {
-                NSLog(@"ENPersistenceController: error while loading persistantStores: %@", error);
+                DLog(@"ENPersistenceController: error while loading persistantStores: %@", error);
             }
         }];
         [self setInterfaceManagedObjectContext:container.viewContext];
         [self setPrivateContext:container.newBackgroundContext];
-        completion();
+        SAFE_BLOCK(completion);
     }
 }
 
@@ -99,11 +101,11 @@
             [[self privateContext] performBlock:^{
                 NSError *error = nil;
                 if (![[self privateContext] save:&error]) {
-                    NSLog(@"ENPersistenceController: error while saving privateContext: %@", error);
+                    DLog(@"ENPersistenceController: error while saving privateContext: %@", error);
                 }
             }];
         } else {
-            NSLog(@"ENPersistenceController: error while saving interfaceManagedObjectContext: %@", error);
+            DLog(@"ENPersistenceController: error while saving interfaceManagedObjectContext: %@", error);
         }
     }];
 }
